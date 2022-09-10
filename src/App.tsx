@@ -90,9 +90,7 @@ function App() {
       dataTable.forEach( (element:any) => {
         if(element.testCode.includes(keyword)){
             tod.push(element)
-        }
-
-        if(element.group.map((item:any)=> item.testCode).find( (item:any)=> item.includes(keyword))){
+        }else if(element.group.map((item:any)=> item.testCode).find( (item:any)=> item.includes(keyword))){
           tod.push(element);
         } 
       
